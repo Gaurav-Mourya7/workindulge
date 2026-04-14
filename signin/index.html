@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in to WorkIndulge — Build Your Future</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Page stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE LOADER OVERLAY
+  ══════════════════════════════════════════════ -->
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-logo">
+       <img src="../public/workindulge-logo.png" alt="WorkIndulge Logo" />
+        <span>WorkIndulge</span>
+      </div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       MAIN SIGNIN LAYOUT
+  ══════════════════════════════════════════════ -->
+  <div id="signin-root" class="page-hidden">
+
+    <!-- LEFT PANEL — FORM -->
+    <section class="form-panel" role="main">
+
+      <!-- Logo -->
+      <div class="brand-mark">
+        <img src="../public/workindulge-logo.png" alt="WorkIndulge Logo" class="brand-logo" />
+        <a href="../landing page/index.html"><span class="brand-name">Work<em>Indulge</em></span></a>
+      </div>
+
+      <!-- Form content wrapper (vertically centred) -->
+      <div class="form-content-wrap">
+
+        <!-- Headline -->
+        <h1 class="form-heading">Sign in to<br><span class="form-heading-muted">WorkIndulge</span></h1>
+        <p class="form-subheading">Welcome back! Continue building real-world projects with AI.</p>
+
+        <!-- OAuth buttons -->
+        <div class="oauth-row">
+          <button class="oauth-btn" type="button" aria-label="Continue with Google">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M17.64 9.2045c0-.6381-.0573-1.2518-.1636-1.8409H9v3.4814h4.8436c-.2086 1.125-.8427 2.0782-1.7959 2.7164v2.2581h2.9087c1.7018-1.5668 2.6836-3.874 2.6836-6.615z" fill="#4285F4"/>
+              <path d="M9 18c2.43 0 4.4673-.8059 5.9564-2.1805l-2.9087-2.2581c-.8059.54-1.8368.8591-3.0477.8591-2.3441 0-4.3282-1.5836-5.036-3.7105H.9574v2.3318C2.4382 15.9832 5.4818 18 9 18z" fill="#34A853"/>
+              <path d="M3.964 10.71c-.18-.54-.2822-1.1168-.2822-1.71s.1023-1.17.2822-1.71V4.9582H.9574C.3477 6.1732 0 7.5477 0 9s.3477 2.8268.9574 4.0418L3.964 10.71z" fill="#FBBC05"/>
+              <path d="M9 3.5795c1.3214 0 2.5077.4541 3.4405 1.346l2.5813-2.5814C13.4632.8918 11.4259 0 9 0 5.4818 0 2.4382 2.0168.9574 4.9582L3.964 7.29C4.6718 5.1632 6.6559 3.5795 9 3.5795z" fill="#EA4335"/>
+            </svg>
+            Google
+          </button>
+          <button class="oauth-btn" type="button" aria-label="Continue with GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </button>
+        </div>
+
+        <div class="divider-row">
+          <span class="divider-line"></span>
+          <span class="divider-text">or fill in your details</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <!-- Signin form -->
+        <form id="signin-form" novalidate autocomplete="off">
+
+          <div class="field-group">
+            <label class="field-label" for="email">Email Address</label>
+            <div class="field-wrap">
+              <input id="email" name="email" type="email" class="field-input" placeholder="you@example.com" autocomplete="email" required />
+              <span class="field-focus-bar"></span>
+            </div>
+            <span class="field-error" id="email-error"></span>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="password">Password</label>
+            <div class="field-wrap">
+              <input id="password" name="password" type="password" class="field-input" placeholder="Enter your password" autocomplete="current-password" required />
+              <button type="button" class="pw-toggle" aria-label="Toggle password visibility" id="pw-toggle">
+                <svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+                <svg class="eye-closed" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none">
+                  <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+              </button>
+              <span class="field-focus-bar"></span>
+            </div>
+            <span class="field-error" id="password-error"></span>
+            <a href="forgot password/index.html" class="forgot-password">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn">
+            <span class="submit-label">Sign In</span>
+            <svg class="submit-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="submit-spinner" aria-hidden="true"></span>
+          </button>
+
+        </form>
+
+        <p class="signin-link">Don't have an account? <a href="../registration/index.html">Create account</a></p>
+
+      </div><!-- /form-content-wrap -->
+    </section>
+
+    <!-- RIGHT PANEL — VALUE PROP (desktop only) -->
+    <aside class="info-panel" aria-hidden="true">
+      <!-- Grid lines decoration -->
+      <div class="grid-lines" aria-hidden="true">
+        <div class="gl gl-v1"></div><div class="gl gl-v2"></div><div class="gl gl-v3"></div>
+        <div class="gl gl-h1"></div><div class="gl gl-h2"></div>
+      </div>
+
+      <!-- Glass card -->
+      <div class="glass-card">
+        <div class="eyebrow-label">
+          <span class="eyebrow-line"></span>
+          WHY WORKINDULGE
+        </div>
+
+        <h2 class="info-heading">Everything you need to<br><em>build your future</em></h2>
+
+        <ul class="feature-list" role="list">
+          <li class="feature-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Access to 200+ real-world projects
+          </li>
+          <li class="feature-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            AI-powered learning assistance
+          </li>
+          <li class="feature-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Connect with 5,000+ students
+          </li>
+          <li class="feature-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Build your professional portfolio
+          </li>
+        </ul>
+
+        <div class="stats-row">
+          <div class="stat-chip">
+            <span class="stat-num">5,000+</span>
+            <span class="stat-desc">Active Students</span>
+          </div>
+          <div class="stat-chip">
+            <span class="stat-num">200+</span>
+            <span class="stat-desc">Projects Built</span>
+          </div>
+        </div>
+      </div><!-- /glass-card -->
+
+    </aside>
+
+  </div><!-- /signin-root -->
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Page script -->
+  <script src="script.js"></script>
+</body>
+</html>

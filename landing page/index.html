@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WorkIndulge — AI-Driven Student Innovation Platform</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header id="main-nav">
+  <nav id="nav-inner">
+    <a href="/landing page/index.html" class="nav-logo">
+      <img src="../public/workindulge-logo.png" alt="WorkIndulge" class="logo-img">
+      <span>WorkIndulge</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#integrations">Integrations</a>
+      <a href="#security">Security</a>
+    </div>
+
+    <div class="nav-cta">
+      <a href="../signin/index.html" class="sign-in">Sign in</a>
+      <a href="../registration/index.html">
+        <button class="btn-primary btn-sm">Join Community</button>
+      </a>
+    </div>
+
+    <button id="menu-btn" class="nav-menu-btn" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+</header>
+
+<div id="mobile-menu">
+  <div class="mobile-menu-inner">
+    <div class="mobile-nav-links">
+      <a href="#features"    style="transition-delay:0ms">Features</a>
+      <a href="#how-it-works" style="transition-delay:75ms">How it works</a>
+      <a href="#testimonials" style="transition-delay:150ms">Testimonials</a>
+      <a href="#integrations" style="transition-delay:225ms">Integrations</a>
+      <a href="#security"     style="transition-delay:300ms">Security</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <a href="../signin/index.html"><button class="btn-outline">Sign in</button></a>
+      <a href="../registration/index.html"><button class="btn-primary">Join Community</button></a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================ HERO ============================================================ -->
+<section id="hero">
+  <div class="hero-grid" id="hero-grid"></div>
+
+  <div class="container-xl hero-content">
+    <div class="hero-eyebrow">
+      <span class="line"></span>
+      AI-Driven Student Innovation Platform
+    </div>
+
+    <div class="mb-6">
+      <h1 class="hero-headline">
+        <span class="d-block">Where students</span>
+        <span class="d-block">
+          <span class="hero-word-container">
+            <span id="hero-animated-word" class="hero-animated-word"></span>
+          </span>
+        </span>
+      </h1>
+    </div>
+
+    <p class="hero-desc">
+      Build real-world projects with AI, collaborate with a thriving community,
+      and launch solutions that matter — powered by modern technologies.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="../registration/index.html" class="w-100 w-sm-auto">
+        <button class="btn-primary btn-lg w-100" style="box-shadow:0 8px 32px rgba(28,26,22,0.1)">
+          Join Community
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </a>
+      <a href="#features" class="w-100 w-sm-auto">
+        <button class="btn-outline btn-lg w-100">Learn More</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Animated Sphere (right side) -->
+  <div class="hero-sphere-container">
+    <canvas id="sphereCanvas"></canvas>
+  </div>
+
+  <!-- Institutions (moved above stats) -->
+  <div class="hero-institutions">
+    <div class="container-xl">
+      <div class="text-center mb-3">
+        <p class="institutions-label">Students from top institutions</p>
+      </div>
+      <div class="marquee-track overflow-hidden">
+        <div class="marquee-inner marquee-gap align-items-center">
+          <span class="marquee-text">IIT Delhi</span>
+          <span class="marquee-text">BITS Pilani</span>
+          <span class="marquee-text">NIT Trichy</span>
+          <span class="marquee-text">VIT Vellore</span>
+          <span class="marquee-text">SRM Chennai</span>
+          <span class="marquee-text">IIIT Hyderabad</span>
+          <span class="marquee-text">DTU Delhi</span>
+          <span class="marquee-text">NSUT Delhi</span>
+          <span class="marquee-text">IIT Delhi</span>
+          <span class="marquee-text">BITS Pilani</span>
+          <span class="marquee-text">NIT Trichy</span>
+          <span class="marquee-text">VIT Vellore</span>
+          <span class="marquee-text">SRM Chennai</span>
+          <span class="marquee-text">IIIT Hyderabad</span>
+          <span class="marquee-text">DTU Delhi</span>
+          <span class="marquee-text">NSUT Delhi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="hero-stats-bar mb-10">
+    <div class="container-xl">
+      <div class="stats-bar-header">
+        <span class="stats-bar-heading font-mono">Live Metrics</span>
+        <span class="stats-bar-pulse"><span class="status-dot animate-pulse"></span></span>
+      </div>
+      <div class="row g-0">
+        <div class="col-6 col-sm-3">
+          <div class="stat-item">
+            <span class="stat-value font-display animated-counter" data-end="5000" data-suffix="+">0</span>
+            <span class="stat-label">Active Students</span>
+            <span class="stat-desc">Building daily</span>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="stat-item">
+            <span class="stat-value font-display animated-counter" data-end="200" data-suffix="+">0</span>
+            <span class="stat-label">Real Projects</span>
+            <span class="stat-desc">Deployed live</span>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="stat-item">
+            <span class="stat-value font-display animated-counter" data-end="15" data-suffix="+">0</span>
+            <span class="stat-label">Tech Domains</span>
+            <span class="stat-desc">Covered fully</span>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3">
+          <div class="stat-item stat-item--last">
+            <span class="stat-value font-display animated-counter" data-end="95" data-suffix="%">0</span>
+            <span class="stat-label">Success Rate</span>
+            <span class="stat-desc">Industry ready</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ INSTITUTIONS ============================================================ -->
+<section id="institutions" style="display:none;">
+</section>
+
+
+<!-- ============================================================ HOW IT WORKS ============================================================ -->
+<section id="how-it-works">
+  <div class="hiw-diagonal"></div>
+  <div class="container-xl position-relative z-1">
+    <div class="mb-5 section-header-spacing">
+      <span class="section-label reveal"><span class="line"></span>Process</span>
+      <h2 class="section-heading font-display reveal">
+        Three steps.<br/>
+        <span class="muted text-white-50">Infinite possibilities.</span>
+      </h2>
+    </div>
+
+    <div class="row g-5 g-lg-5 align-items-start">
+      <div class="col-12 col-lg-6 reveal-x-left">
+        <button class="hiw-step active" data-idx="0">
+          <div class="hiw-step-inner">
+            <span class="hiw-step-num font-display">I</span>
+            <div class="flex-grow-1">
+              <h3 class="hiw-step-title font-display">Learn &amp; Explore</h3>
+              <p class="hiw-step-desc">Discover curated learning paths across AI, Web, IoT, and more. Explore real-world case studies and get inspired.</p>
+              <div class="hiw-progress"><div class="hiw-progress-bar"></div></div>
+            </div>
+          </div>
+        </button>
+        <button class="hiw-step" data-idx="1">
+          <div class="hiw-step-inner">
+            <span class="hiw-step-num font-display">II</span>
+            <div class="flex-grow-1">
+              <h3 class="hiw-step-title font-display">Build Projects</h3>
+              <p class="hiw-step-desc">Work on guided, hands-on projects with real datasets and modern frameworks. Collaborate with peers in real time.</p>
+              <div class="hiw-progress"><div class="hiw-progress-bar"></div></div>
+            </div>
+          </div>
+        </button>
+        <button class="hiw-step" data-idx="2">
+          <div class="hiw-step-inner">
+            <span class="hiw-step-num font-display">III</span>
+            <div class="flex-grow-1">
+              <h3 class="hiw-step-title font-display">Deploy &amp; Showcase</h3>
+              <p class="hiw-step-desc">Ship your projects live. Build a portfolio that stands out to employers and the tech community.</p>
+              <div class="hiw-progress"><div class="hiw-progress-bar"></div></div>
+            </div>
+          </div>
+        </button>
+
+        <!-- Join Community CTA inside HIW -->
+        <div class="hiw-cta-row">
+          <a href="../registration/index.html">
+            <button class="btn-outline btn-hiw-join">
+              Join Community
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6 reveal-x-right">
+        <div class="hiw-code-panel">
+          <div class="hiw-code-header">
+            <div class="hiw-dots"><div class="hiw-dot"></div><div class="hiw-dot"></div><div class="hiw-dot"></div></div>
+            <span class="hiw-file">project.ts</span>
+          </div>
+          <div class="hiw-code-body" id="hiw-code-body"></div>
+          <div class="hiw-code-footer">
+            <span class="status-pulse-indicator animate-pulse"></span>
+            <span class="hiw-code-status">Ready</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ FEATURES ============================================================ -->
+<section id="features">
+  <div class="container-xl">
+    <div class="section-header-spacing ">
+      <span class="section-label reveal mt-4"><span class="line"></span>Capabilities</span>
+      <h2 class="section-heading font-display reveal">
+        Everything you need.<br/>
+        <span class="text-muted">Nothing you don't.</span>
+      </h2>
+    </div>
+
+    <div class="feature-row reveal">
+      <span class="feature-num">01</span>
+      <div class="feature-body">
+        <div>
+          <h3 class="feature-title font-display">AI-Based Projects</h3>
+          <p class="feature-desc">Build intelligent applications from day one. Work with machine learning models, computer vision, NLP, and generative AI in hands-on, guided projects.</p>
+        </div>
+        <div class="feature-visual">
+          <svg viewBox="0 0 200 160">
+            <circle cx="100" cy="80" r="12" fill="currentColor"><animate attributeName="r" values="12;14;12" dur="2s" repeatCount="indefinite"/></circle>
+            <g><line x1="100" y1="80" x2="150" y2="80" stroke="currentColor" stroke-width="1" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" begin="0s" repeatCount="indefinite"/></line><circle cx="150" cy="80" r="6" fill="none" stroke="currentColor" stroke-width="2"><animate attributeName="r" values="6;8;6" dur="2s" begin="0s" repeatCount="indefinite"/></circle></g>
+            <g><line x1="100" y1="80" x2="125" y2="37" stroke="currentColor" stroke-width="1" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" begin="0.3s" repeatCount="indefinite"/></line><circle cx="125" cy="37" r="6" fill="none" stroke="currentColor" stroke-width="2"><animate attributeName="r" values="6;8;6" dur="2s" begin="0.3s" repeatCount="indefinite"/></circle></g>
+            <g><line x1="100" y1="80" x2="50" y2="37" stroke="currentColor" stroke-width="1" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" begin="0.6s" repeatCount="indefinite"/></line><circle cx="50" cy="37" r="6" fill="none" stroke="currentColor" stroke-width="2"><animate attributeName="r" values="6;8;6" dur="2s" begin="0.6s" repeatCount="indefinite"/></circle></g>
+            <g><line x1="100" y1="80" x2="50" y2="123" stroke="currentColor" stroke-width="1" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" begin="0.9s" repeatCount="indefinite"/></line><circle cx="50" cy="123" r="6" fill="none" stroke="currentColor" stroke-width="2"><animate attributeName="r" values="6;8;6" dur="2s" begin="0.9s" repeatCount="indefinite"/></circle></g>
+            <g><line x1="100" y1="80" x2="125" y2="123" stroke="currentColor" stroke-width="1" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" begin="1.2s" repeatCount="indefinite"/></line><circle cx="125" cy="123" r="6" fill="none" stroke="currentColor" stroke-width="2"><animate attributeName="r" values="6;8;6" dur="2s" begin="1.2s" repeatCount="indefinite"/></circle></g>
+            <circle cx="100" cy="80" r="30" fill="none" stroke="currentColor" stroke-width="1" opacity="0"><animate attributeName="r" values="20;60" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="2s" repeatCount="indefinite"/></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <span class="feature-num">02</span>
+      <div class="feature-body">
+        <div>
+          <h3 class="feature-title font-display">Real-World Problem Solving</h3>
+          <p class="feature-desc">Tackle challenges faced by actual industries. Every project is designed around real problems — from healthcare to sustainability to fintech.</p>
+        </div>
+        <div class="feature-visual">
+          <svg viewBox="0 0 200 160">
+            <defs><clipPath id="deployClip"><rect x="30" y="20" width="140" height="120" rx="4"/></clipPath></defs>
+            <rect x="30" y="20" width="140" height="120" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            <g clip-path="url(#deployClip)">
+              <rect x="40" y="35" width="120" height="10" rx="2" fill="currentColor" opacity="0.15"><animate attributeName="opacity" values="0.15;0.8;0.15" dur="2s" begin="0s" repeatCount="indefinite"/><animate attributeName="width" values="20;120;20" dur="2s" begin="0s" repeatCount="indefinite"/></rect>
+              <rect x="40" y="51" width="120" height="10" rx="2" fill="currentColor" opacity="0.15"><animate attributeName="opacity" values="0.15;0.8;0.15" dur="2s" begin="0.15s" repeatCount="indefinite"/><animate attributeName="width" values="20;120;20" dur="2s" begin="0.15s" repeatCount="indefinite"/></rect>
+              <rect x="40" y="67" width="120" height="10" rx="2" fill="currentColor" opacity="0.15"><animate attributeName="opacity" values="0.15;0.8;0.15" dur="2s" begin="0.3s" repeatCount="indefinite"/><animate attributeName="width" values="20;120;20" dur="2s" begin="0.3s" repeatCount="indefinite"/></rect>
+              <rect x="40" y="83" width="120" height="10" rx="2" fill="currentColor" opacity="0.15"><animate attributeName="opacity" values="0.15;0.8;0.15" dur="2s" begin="0.45s" repeatCount="indefinite"/><animate attributeName="width" values="20;120;20" dur="2s" begin="0.45s" repeatCount="indefinite"/></rect>
+              <rect x="40" y="99" width="120" height="10" rx="2" fill="currentColor" opacity="0.15"><animate attributeName="opacity" values="0.15;0.8;0.15" dur="2s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="width" values="20;120;20" dur="2s" begin="0.6s" repeatCount="indefinite"/></rect>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <span class="feature-num">03</span>
+      <div class="feature-body">
+        <div>
+          <h3 class="feature-title font-display">Community Collaboration</h3>
+          <p class="feature-desc">Team up with peers across the globe. Share ideas, review code, and build together in a supportive, innovation-driven environment.</p>
+        </div>
+        <div class="feature-visual">
+          <svg viewBox="0 0 200 160">
+            <rect x="30" y="50" width="50" height="60" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            <text x="55" y="85" text-anchor="middle" font-size="20" font-family="monospace" fill="currentColor">A</text>
+            <circle cx="55" cy="35" r="12" fill="none" stroke="currentColor" stroke-width="2"/>
+            <rect x="120" y="50" width="50" height="60" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            <text x="145" y="85" text-anchor="middle" font-size="20" font-family="monospace" fill="currentColor">B</text>
+            <circle cx="145" cy="35" r="12" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="80" y1="80" x2="120" y2="80" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" values="0;-8" dur="0.5s" repeatCount="indefinite"/></line>
+            <circle r="4" fill="currentColor"><animateMotion dur="1.5s" repeatCount="indefinite" path="M 80 80 L 120 80"/></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <span class="feature-num">04</span>
+      <div class="feature-body">
+        <div>
+          <h3 class="feature-title font-display">End-to-End Development</h3>
+          <p class="feature-desc">Go from concept to deployment. Learn the full stack — design, build, test, and ship production-ready applications.</p>
+        </div>
+        <div class="feature-visual">
+          <svg viewBox="0 0 200 160">
+            <path d="M 100 20 L 120 60 L 120 110 L 110 130 L 100 120 L 90 130 L 80 110 L 80 60 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M 80 70 L 60 90 L 65 100 L 80 90" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M 120 70 L 140 90 L 135 100 L 120 90" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="100" cy="75" r="10" fill="currentColor" opacity="0.2"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite"/></circle>
+            <circle cx="100" cy="75" r="5" fill="currentColor"/>
+            <line x1="95" y1="130" x2="90" y2="150" stroke="currentColor" stroke-width="1" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="0.5s" repeatCount="indefinite"/></line>
+            <line x1="100" y1="125" x2="100" y2="155" stroke="currentColor" stroke-width="1" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="0.5s" begin="0.1s" repeatCount="indefinite"/></line>
+            <line x1="105" y1="130" x2="110" y2="150" stroke="currentColor" stroke-width="1" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="0.5s" begin="0.2s" repeatCount="indefinite"/></line>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <span class="feature-num">05</span>
+      <div class="feature-body">
+        <div>
+          <h3 class="feature-title font-display">Multi-Domain Learning</h3>
+          <p class="feature-desc">Explore AI, Web Development, IoT, Mobile Apps, and more. Cross-domain projects help you become a versatile, well-rounded builder.</p>
+        </div>
+        <div class="feature-visual">
+          <svg viewBox="0 0 200 160">
+            <circle cx="100" cy="50" r="18" fill="none" stroke="currentColor" stroke-width="1.5"><animate attributeName="r" values="18;20;18" dur="2s" begin="0s" repeatCount="indefinite"/></circle>
+            <text x="100" y="54" text-anchor="middle" font-size="10" font-family="monospace" fill="currentColor">AI</text>
+            <circle cx="55" cy="90" r="18" fill="none" stroke="currentColor" stroke-width="1.5"><animate attributeName="r" values="18;20;18" dur="2s" begin="0.3s" repeatCount="indefinite"/></circle>
+            <text x="55" y="94" text-anchor="middle" font-size="10" font-family="monospace" fill="currentColor">Web</text>
+            <circle cx="145" cy="90" r="18" fill="none" stroke="currentColor" stroke-width="1.5"><animate attributeName="r" values="18;20;18" dur="2s" begin="0.6s" repeatCount="indefinite"/></circle>
+            <text x="145" y="94" text-anchor="middle" font-size="10" font-family="monospace" fill="currentColor">IoT</text>
+            <circle cx="75" cy="130" r="18" fill="none" stroke="currentColor" stroke-width="1.5"><animate attributeName="r" values="18;20;18" dur="2s" begin="0.9s" repeatCount="indefinite"/></circle>
+            <text x="75" y="134" text-anchor="middle" font-size="10" font-family="monospace" fill="currentColor">ML</text>
+            <circle cx="125" cy="130" r="18" fill="none" stroke="currentColor" stroke-width="1.5"><animate attributeName="r" values="18;20;18" dur="2s" begin="1.2s" repeatCount="indefinite"/></circle>
+            <text x="125" y="134" text-anchor="middle" font-size="10" font-family="monospace" fill="currentColor">App</text>
+            <line x1="100" y1="50" x2="55" y2="90" stroke="currentColor" stroke-width="1" opacity="0.2"/><line x1="100" y1="50" x2="145" y2="90" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+            <line x1="55" y1="90" x2="75" y2="130" stroke="currentColor" stroke-width="1" opacity="0.2"/><line x1="145" y1="90" x2="125" y2="130" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+            <line x1="75" y1="130" x2="125" y2="130" stroke="currentColor" stroke-width="1" opacity="0.2"/><line x1="55" y1="90" x2="145" y2="90" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features section Join Community CTA -->
+    <div class="features-join-cta reveal">
+      <p class="features-join-text">Ready to start building with these technologies?</p>
+      <a href="/registration/index.html">
+        <button class="btn-primary">
+          Join Community
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================ TESTIMONIALS ============================================================ -->
+<section id="testimonials">
+  <div class="container-xl">
+    <div class="testimonial-label-row">
+      <span class="font-mono text-uppercase testimonial-pre-text">What students say</span>
+      <div class="testimonial-divider"></div>
+      <span class="testimonial-counter" id="testimonial-counter">01 / 03</span>
+    </div>
+
+    <div class="row g-5 g-lg-5">
+      <div class="col-12 col-lg-8">
+        <blockquote id="testimonial-quote">
+          <p class="testimonial-quote-text font-display"></p>
+        </blockquote>
+        <div class="testimonial-author" id="testimonial-author">
+          <div class="author-avatar font-display" id="t-avatar"></div>
+          <div>
+            <p class="author-name" id="t-name"></p>
+            <p class="author-role" id="t-role"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 d-flex flex-column justify-content-center">
+        <div class="testimonial-metric" id="testimonial-metric">
+          <span class="metric-result-label">Key Result</span>
+          <p class="metric-result-value font-display"></p>
+        </div>
+        <div class="testimonial-dots" id="testimonial-dots"></div>
+        <!-- Testimonials Join CTA -->
+        <div class="testimonial-join-cta">
+          <a href="/registration/index.html">
+            <button class="btn-primary btn-testimonial-join">
+              Join Community
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </a>
+          <p class="testimonial-join-note font-mono">Free to start</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ INTEGRATIONS ============================================================ -->
+<section id="integrations">
+  <div class="container-xl">
+    <div class="text-center mx-auto reveal integrations-header">
+      <span class="section-label d-flex align-items-center justify-content-center">
+        <span class="line"></span>&nbsp;Technologies&nbsp;<span class="line"></span>
+      </span>
+      <h2 class="section-heading font-display mb-4">
+        Works with everything<br/>you already use.
+      </h2>
+      <p class="integrations-desc">
+        Build projects with industry-standard tools. Learn the tech stack that companies actually use.
+      </p>
+    </div>
+  </div>
+
+  <div class="marquee-row">
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/python.svg" alt="Python"></div><div class="tech-card-name">Python</div><div class="tech-card-cat">Language</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/tensorflow.svg" alt="TensorFlow"></div><div class="tech-card-name">TensorFlow</div><div class="tech-card-cat">AI / ML</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/springboot.svg" alt="Spring Boot"></div><div class="tech-card-name">Spring Boot</div><div class="tech-card-cat">Backend</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/react.svg" alt="React"></div><div class="tech-card-name">React</div><div class="tech-card-cat">Frontend</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/nodedotjs.svg" alt="Node.js"></div><div class="tech-card-name">Node.js</div><div class="tech-card-cat">Runtime</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/postgresql.svg" alt="PostgreSQL"></div><div class="tech-card-name">PostgreSQL</div><div class="tech-card-cat">Database</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/docker.svg" alt="Docker"></div><div class="tech-card-name">Docker</div><div class="tech-card-cat">DevOps</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/aws.svg" alt="AWS"></div><div class="tech-card-name">AWS</div><div class="tech-card-cat">Cloud</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/pytorch.svg" alt="PyTorch"></div><div class="tech-card-name">PyTorch</div><div class="tech-card-cat">AI / ML</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/nextdotjs.svg" alt="Next.js"></div><div class="tech-card-name">Next.js</div><div class="tech-card-cat">Framework</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/mongodb.svg" alt="MongoDB"></div><div class="tech-card-name">MongoDB</div><div class="tech-card-cat">Database</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/kubernetes.svg" alt="Kubernetes"></div><div class="tech-card-name">Kubernetes</div><div class="tech-card-cat">Orchestration</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/python.svg" alt="Python"></div><div class="tech-card-name">Python</div><div class="tech-card-cat">Language</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/tensorflow.svg" alt="TensorFlow"></div><div class="tech-card-name">TensorFlow</div><div class="tech-card-cat">AI / ML</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/springboot.svg" alt="Spring Boot"></div><div class="tech-card-name">Spring Boot</div><div class="tech-card-cat">Backend</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/react.svg" alt="React"></div><div class="tech-card-name">React</div><div class="tech-card-cat">Frontend</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/nodedotjs.svg" alt="Node.js"></div><div class="tech-card-name">Node.js</div><div class="tech-card-cat">Runtime</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/postgresql.svg" alt="PostgreSQL"></div><div class="tech-card-name">PostgreSQL</div><div class="tech-card-cat">Database</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/docker.svg" alt="Docker"></div><div class="tech-card-name">Docker</div><div class="tech-card-cat">DevOps</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/aws.svg" alt="AWS"></div><div class="tech-card-name">AWS</div><div class="tech-card-cat">Cloud</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/pytorch.svg" alt="PyTorch"></div><div class="tech-card-name">PyTorch</div><div class="tech-card-cat">AI / ML</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/nextdotjs.svg" alt="Next.js"></div><div class="tech-card-name">Next.js</div><div class="tech-card-cat">Framework</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/mongodb.svg" alt="MongoDB"></div><div class="tech-card-name">MongoDB</div><div class="tech-card-cat">Database</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/kubernetes.svg" alt="Kubernetes"></div><div class="tech-card-name">Kubernetes</div><div class="tech-card-cat">Orchestration</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee-row mb-0">
+    <div class="marquee-track">
+      <div class="marquee-inner-reverse">
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/kubernetes.svg" alt="Kubernetes"></div><div class="tech-card-name">Kubernetes</div><div class="tech-card-cat">Orchestration</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/mongodb.svg" alt="MongoDB"></div><div class="tech-card-name">MongoDB</div><div class="tech-card-cat">Database</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/nextdotjs.svg" alt="Next.js"></div><div class="tech-card-name">Next.js</div><div class="tech-card-cat">Framework</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/pytorch.svg" alt="PyTorch"></div><div class="tech-card-name">PyTorch</div><div class="tech-card-cat">AI / ML</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/aws.svg" alt="AWS"></div><div class="tech-card-name">AWS</div><div class="tech-card-cat">Cloud</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/docker.svg" alt="Docker"></div><div class="tech-card-name">Docker</div><div class="tech-card-cat">DevOps</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/postgresql.svg" alt="PostgreSQL"></div><div class="tech-card-name">PostgreSQL</div><div class="tech-card-cat">Database</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/nodedotjs.svg" alt="Node.js"></div><div class="tech-card-name">Node.js</div><div class="tech-card-cat">Runtime</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/react.svg" alt="React"></div><div class="tech-card-name">React</div><div class="tech-card-cat">Frontend</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/springboot.svg" alt="Spring Boot"></div><div class="tech-card-name">Spring Boot</div><div class="tech-card-cat">Backend</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/tensorflow.svg" alt="TensorFlow"></div><div class="tech-card-name">TensorFlow</div><div class="tech-card-cat">AI / ML</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/python.svg" alt="Python"></div><div class="tech-card-name">Python</div><div class="tech-card-cat">Language</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/kubernetes.svg" alt="Kubernetes"></div><div class="tech-card-name">Kubernetes</div><div class="tech-card-cat">Orchestration</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/mongodb.svg" alt="MongoDB"></div><div class="tech-card-name">MongoDB</div><div class="tech-card-cat">Database</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/nextdotjs.svg" alt="Next.js"></div><div class="tech-card-name">Next.js</div><div class="tech-card-cat">Framework</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/pytorch.svg" alt="PyTorch"></div><div class="tech-card-name">PyTorch</div><div class="tech-card-cat">AI / ML</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/aws.svg" alt="AWS"></div><div class="tech-card-name">AWS</div><div class="tech-card-cat">Cloud</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/docker.svg" alt="Docker"></div><div class="tech-card-name">Docker</div><div class="tech-card-cat">DevOps</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/postgresql.svg" alt="PostgreSQL"></div><div class="tech-card-name">PostgreSQL</div><div class="tech-card-cat">Database</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/nodedotjs.svg" alt="Node.js"></div><div class="tech-card-name">Node.js</div><div class="tech-card-cat">Runtime</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/react.svg" alt="React"></div><div class="tech-card-name">React</div><div class="tech-card-cat">Frontend</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/springboot.svg" alt="Spring Boot"></div><div class="tech-card-name">Spring Boot</div><div class="tech-card-cat">Backend</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/tensorflow.svg" alt="TensorFlow"></div><div class="tech-card-name">TensorFlow</div><div class="tech-card-cat">AI / ML</div></div>
+        <div class="tech-card"><div class="tech-card-logo"><img src="../public/python.svg" alt="Python"></div><div class="tech-card-name">Python</div><div class="tech-card-cat">Language</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ SECURITY ============================================================ -->
+<section id="security">
+  <div class="container-xl">
+    <div class="row g-5 g-lg-5">
+      <div class="col-12 col-lg-6">
+        <span class="section-label reveal"><span class="line"></span>Trust &amp; Quality</span>
+        <h2 class="section-heading font-display mb-4 reveal">
+          Trust is<br/>non-negotiable.
+        </h2>
+        <p class="security-desc mb-4 reveal">
+          Every project is mentor-reviewed. Every student's data is protected.
+          Quality and security are built into every layer of the platform.
+        </p>
+        <div class="security-badges mb-5">
+          <span class="security-badge font-mono">Verified</span>
+          <span class="security-badge font-mono">Encrypted</span>
+          <span class="security-badge font-mono">Mentored</span>
+          <span class="security-badge font-mono">Certified</span>
+          <span class="security-badge font-mono">Open Source</span>
+        </div>
+        <!-- Security section Join Community CTA -->
+        <div class="security-join-cta reveal">
+          <a href="/registration/index.html">
+            <button class="btn-primary">
+              Join Community
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </a>
+          <span class="security-join-note font-mono">5,000+ students already building</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="security-card">
+          <div class="d-flex align-items-start gap-3 flex-column flex-sm-row">
+            <div class="security-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><h3 class="security-card-title">Secure Collaboration</h3><p class="security-card-desc">Private repositories, access controls, and encrypted communication for all team projects.</p></div>
+          </div>
+        </div>
+        <div class="security-card">
+          <div class="d-flex align-items-start gap-3 flex-column flex-sm-row">
+            <div class="security-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div><h3 class="security-card-title">Data Protection</h3><p class="security-card-desc">End-to-end encryption for student data, project files, and personal information.</p></div>
+          </div>
+        </div>
+        <div class="security-card">
+          <div class="d-flex align-items-start gap-3 flex-column flex-sm-row">
+            <div class="security-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div><h3 class="security-card-title">Mentor-Verified Content</h3><p class="security-card-desc">All projects and learning paths are reviewed by industry mentors for quality assurance.</p></div>
+          </div>
+        </div>
+        <div class="security-card mb-0">
+          <div class="d-flex align-items-start gap-3 flex-column flex-sm-row">
+            <div class="security-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+            <div><h3 class="security-card-title">Certified Outcomes</h3><p class="security-card-desc">Blockchain-backed certificates and verifiable project portfolios for career credibility.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ CTA — centered, screenshot 2 style ============================================================ -->
+<section id="cta">
+  <div class="container-xl">
+    <div class="cta-box hidden" id="cta-box">
+      <div class="cta-spotlight" id="cta-spotlight"></div>
+      <div class="cta-inner">
+        <p class="cta-eyebrow font-mono">— READY WHEN YOU ARE —</p>
+        <h2 class="cta-heading font-display">
+          Start building.<br/>
+          <span class="cta-heading-muted">Not just learning.</span>
+        </h2>
+        <p class="cta-desc">
+          Join 5,000+ students who stopped watching and started shipping. Your first project is waiting.
+        </p>
+        <div class="cta-btns">
+         <a href="/registration/index.html">
+            <button class="btn-primary btn-lg">
+              Join Community
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </a>
+          <a href="/contributor/index.html">
+            <button class="btn-outline btn-lg">Become Contributor</button>
+          </a>
+        </div>
+        <p class="cta-credit font-mono">No credit card required &nbsp;·&nbsp; Free to start &nbsp;·&nbsp; Ship your first project in 30 days</p>
+      </div>
+      <div class="cta-corner-tr"></div>
+      <div class="cta-corner-bl"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ FOOTER ============================================================ -->
+<footer>
+  <div class="footer-gradient"></div>
+  <div class="container-xl">
+    <div class="footer-main">
+      <div class="row g-4 g-lg-4">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+          <a href="#" class="footer-brand-name font-display">WorkIndulge</a>
+          <p class="footer-tagline">
+            The platform for student innovators. Build real-world projects, collaborate, and launch solutions that matter.
+          </p>
+          <div class="footer-social">
+            <a href="#">
+              <img src="../public/x.svg" alt="Twitter">
+              Twitter
+            </a>
+            <a href="#">
+              <img src="../public/github.svg" alt="GitHub">
+              GitHub
+            </a>
+            <a href="#">
+              <img src="../public/linkedin-in-brands-solid-full.svg" alt="LinkedIn">
+              LinkedIn
+            </a>
+            <a href="#">
+              <img src="../public/instagram.svg" alt="Instagram">
+              Instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-3 col-md-3 col-lg-2 footer-col">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#integrations">Integrations</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-sm-3 col-md-3 col-lg-2 footer-col">
+          <h3>Developers</h3>
+          <ul>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">SDK</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-sm-3 col-md-3 col-lg-2 footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers <span class="footer-badge">Hiring</span></a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-sm-3 col-md-3 col-lg-2 footer-col">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#security">Security</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">2025 WorkIndulge. All rights reserved.</p>
+      <div class="footer-status">
+        <span class="status-dot animate-pulse"></span>
+        All systems operational
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

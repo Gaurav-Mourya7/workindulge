@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forgot Password — WorkIndulge</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Page stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE LOADER OVERLAY
+  ══════════════════════════════════════════════ -->
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-logo">
+       <img src="../../public/workindulge-logo.png" alt="WorkIndulge Logo" />
+        <span>WorkIndulge</span>
+      </div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       MAIN FORGOT PASSWORD LAYOUT
+  ══════════════════════════════════════════════ -->
+  <div id="forgot-root" class="page-hidden">
+
+    <!-- LEFT PANEL — FORM -->
+    <section class="form-panel" role="main">
+
+      <!-- Logo -->
+      <div class="brand-mark">
+        <img src="../../public/workindulge-logo.png" alt="WorkIndulge Logo" class="brand-logo" />
+        <a href="../../landing page/index.html"><span class="brand-name">Work<em>Indulge</em></span></a>
+      </div>
+
+      <!-- Form content wrapper (vertically centred) -->
+      <div class="form-content-wrap">
+
+        <!-- Headline -->
+        <h1 class="form-heading">Forgot<br><span class="form-heading-muted">password?</span></h1>
+        <p class="form-subheading">Enter your email and we'll send you a link to reset your password.</p>
+
+        <!-- Forgot password form -->
+        <form id="forgot-form" novalidate autocomplete="off">
+
+          <div class="field-group">
+            <label class="field-label" for="email">Email Address</label>
+            <div class="field-wrap">
+              <input id="email" name="email" type="email" class="field-input" placeholder="you@example.com" autocomplete="email" required />
+              <span class="field-focus-bar"></span>
+            </div>
+            <span class="field-error" id="email-error"></span>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn">
+            <span class="submit-label">Send Reset Link</span>
+            <svg class="submit-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="submit-spinner" aria-hidden="true"></span>
+          </button>
+
+        </form>
+
+        <p class="signin-link">Remember your password? <a href="../index.html">Sign in</a></p>
+
+      </div><!-- /form-content-wrap -->
+    </section>
+
+    <!-- RIGHT PANEL — VALUE PROP (desktop only) -->
+    <aside class="info-panel" aria-hidden="true">
+      <!-- Grid lines decoration -->
+      <div class="grid-lines" aria-hidden="true">
+        <div class="gl gl-v1"></div><div class="gl gl-v2"></div><div class="gl gl-v3"></div>
+        <div class="gl gl-h1"></div><div class="gl gl-h2"></div>
+      </div>
+
+      <!-- Glass card -->
+      <div class="glass-card">
+        <div class="eyebrow-label">
+          <span class="eyebrow-line"></span>
+          WHY WORKINDULGE
+        </div>
+
+        <h2 class="info-heading">Everything you need to<br><em>build your future</em></h2>
+
+        <ul class="feature-list" role="list">
+          <li class="feature-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Access to 200+ real-world projects
+          </li>
+          <li class="feature-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            AI-powered learning assistance
+          </li>
+          <li class="feature-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Connect with 5,000+ students
+          </li>
+          <li class="feature-item">
+            <span class="check-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Build your professional portfolio
+          </li>
+        </ul>
+
+        <div class="stats-row">
+          <div class="stat-chip">
+            <span class="stat-num">5,000+</span>
+            <span class="stat-desc">Active Students</span>
+          </div>
+          <div class="stat-chip">
+            <span class="stat-num">200+</span>
+            <span class="stat-desc">Projects Built</span>
+          </div>
+        </div>
+      </div><!-- /glass-card -->
+
+    </aside>
+
+  </div><!-- /forgot-root -->
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Page script -->
+  <script src="script.js"></script>
+</body>
+</html>
